@@ -1,0 +1,45 @@
+=>Creat a collection of employees which has name,addresss,email.phoneno,DOB,gender,dept,city. (10 records)
+
+db.employee1.insertMany(
+[
+{"eanme":"Anusha","eadd":"kavinagar","eemail":"anu@gmail.com","ephone":"8906345627","edob":ISODate("1999-07-02"),"gender":"Female","dept":"CS","escity":"Dharwad"},
+{"eanme":"Reta","eadd":"shivnagar","eemail":"reta@yahoo.com","ephone":984613785,"edob":ISODate("1991-09-03"),"gender":"Female","dept":"MCA","escity":"Hubli"},
+{"eanme":"Sidhart","eadd":"vidyanagar","eemail":"sid@gmail.com","ephone":789456395,"edob":ISODate("2001-08-08"),"gender":"Male","dept":"MCA","escity":"Hubli"},
+{"eanme":"Preeti","eadd":"Basavnagar","eemail":"pt@gmail.com","ephone":931458545,"edob":ISODate("2002-06-03"),"gender":"Female","dept":"EC","escity":"Dharwad"},
+{"eanme":"Sushant","eadd":"Laxminagar","eemail":"sushant@gmail.com","ephone":789546512,"edob":ISODate("1999-07-26"),"gender":"Male","dept":"CS","escity":"Dharwad"},
+{"eanme":"Sharan","eadd":"Tilaknagar","eemail":"sharan@yahoo.com","ephone":8186239034,"edob":ISODate("2002-08-18"),"gender":"Male","dept":"Mech","escity":"Gulbarga"},
+{"eanme":"Megha","eadd":"Pooja colony","eemail":"pooja@gmail.com","ephone":9809205739,"edob":ISODate("2000-07-04"),"gender":"Female","dept":"Mech","escity":"Gulbara"},
+{"eanme":"Manish","eadd":"vasantnagar","eemail":"vasant@yahoo.com","ephone":7891205487,"edob":ISODate("1999-02-18"),"gender":"Male","dept":"Cs","escity":"Dharawd"},
+{"eanme":"Kiran","eadd":"Basavnagar","eemail":"kiran@gmail.com","ephone":9020354682,"edob":ISODate("2001-11-31"),"gender":"Male","dept":"CS","escity":"Hubli"},
+{"eanme":"Madhu","eadd":"Tilaknagar","eemail":"madhu@yahoo.com","ephone":8986423635,"edob":ISODate("2002-05-18"),"gender":"Female","dept":"Mech","escity":"Gulbarga"}
+]
+)
+
+=>Query the empolyees based on gender
+db.employee.find({"gender":"Female"})
+
+
+=>Query the empolyees based on dept
+db.employee.find({"dept":"MCA"})
+
+=>Query the empolyees based on Dod ($gt:ISODate("2000-01-01"))
+db.employee.find({"edob":{$gt:ISODate("2000-01-01")}})
+
+=>Query the empolyees based on email (yahoo domain)
+db.employee.find({"eemail":{$regex:"yahoo.com"})
+db.employee.find({"eemail":/.@yahoo.com.*/}})
+
+=>Query the empolyees based on name ( Start with "M")
+db.employee.find({"ename":/.*M.*/})
+db.employee.find({"eanme":{$regex:"^m"}})
+
+
+
+Update query:
+=>db.employee.update({},{})
+
+update query for employee:
+=>db.employee.update({"ecode":98705},{$set :{"ephone":9945642545}})
+
+Delete query:
+=>db.employee.deleteMany({})
