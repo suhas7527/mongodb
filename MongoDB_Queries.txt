@@ -2,8 +2,8 @@
 
 db.employee1.insertMany(
 [
-{"eanme":"Anusha","eadd":"kavinagar","eemail":"anu@gmail.com","ephone":"8906345627","edob":ISODate("1999-07-02"),"gender":"Female","dept":"CS","escity":"Dharwad"},
-{"eanme":"Reta","eadd":"shivnagar","eemail":"reta@yahoo.com","ephone":984613785,"edob":ISODate("1991-09-03"),"gender":"Female","dept":"MCA","escity":"Hubli"},
+{"eanme":"Rahul","eadd":"haveri","eemail":"ra@gmail.com","ephone":"8906345627","edob":ISODate("1999-07-02"),"gender":"male","dept":"CS","escity":"Dharwad"},
+{"eanme":"geerish","eadd":"bijapur","eemail":"geerish@yahoo.com","ephone":984613785,"edob":ISODate("1991-09-03"),"gender":"male","dept":"MCA","escity":"bijapur"},
 {"eanme":"Sidhart","eadd":"vidyanagar","eemail":"sid@gmail.com","ephone":789456395,"edob":ISODate("2001-08-08"),"gender":"Male","dept":"MCA","escity":"Hubli"},
 {"eanme":"Preeti","eadd":"Basavnagar","eemail":"pt@gmail.com","ephone":931458545,"edob":ISODate("2002-06-03"),"gender":"Female","dept":"EC","escity":"Dharwad"},
 {"eanme":"Sushant","eadd":"Laxminagar","eemail":"sushant@gmail.com","ephone":789546512,"edob":ISODate("1999-07-26"),"gender":"Male","dept":"CS","escity":"Dharwad"},
